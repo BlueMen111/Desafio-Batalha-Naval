@@ -1,10 +1,10 @@
 
-# Batalha Naval — Código revisado
+# Batalha Naval —
 
 Esta revisão corrige o erro de compilação no **Novato** causado por inicialização de **VLA** (Variable Length Array).
 Agora os tamanhos dos vetores foram substituídos por **constantes de tempo de compilação** (`#define`).
 
-## O que foi revisado
+## Ajustes
 - `novato_bn.c`: trocado `const int` por `#define` e removida a inicialização de VLA. **Compila com `-Wall -Wextra -O2`.**
 - `aventureiro_bn.c`: sem VLAs inicializados; adicionei checagens de limites nas funções de posicionamento horizontal/vertical.
 - `mestre_bn.c`: nenhuma alteração estrutural necessária; já usa `#define N 10` e não inicializa VLAs.
