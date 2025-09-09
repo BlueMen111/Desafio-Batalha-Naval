@@ -18,14 +18,14 @@
 // Marca uma sequência horizontal de comprimento len começando em (x,y)
 void coloca_horizontal(int m[N][N], int x, int y, int len) {
     for (int j = 0; j < len && (y + j) < N; j++) {
-        m[x][y + j] = 3;
+        if (x >= 0 && x < N) m[x][y + j] = 3;
     }
 }
 
 // Marca uma sequência vertical de comprimento len começando em (x,y)
 void coloca_vertical(int m[N][N], int x, int y, int len) {
     for (int i = 0; i < len && (x + i) < N; i++) {
-        m[x + i][y] = 3;
+        if (y >= 0 && y < N) m[x + i][y] = 3;
     }
 }
 
